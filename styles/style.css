@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'letraa';
+    src: url(/font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root{
+    --h1-font-size:2rem;
+    --span-font-size:1rem;
+    --heigth-img-hero:60vh;
+}
+
+@media (width < 1024px){
+    :root{
+        --h1-font-size:1.5rem;
+        --span-font-size:.6rem;
+        --heigth-img-hero:40vh;
+    }  
+}
+
+@media (width < 540px){
+    :root{
+        --h1-font-size:1rem;
+        --span-font-size:.4rem;
+        --heigth-img-hero:40vh;
+    }  
+}
+
+.hero-container{
+    background: url(/img/fondo.jpg) center/cover ;
+    height: var(--heigth-img-hero);
+    position: relative;
+}
+
+.hero-container::before{
+   content: "";
+   background-color: black;
+   opacity: 0.6;
+   position: absolute;
+   z-index: 0;
+   height: 100%;
+   width: 100%;
+}
+
